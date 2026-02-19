@@ -1,0 +1,6 @@
+INFO       Schema: IFC4
+INFO     Parsing roof geometry: arc.ifc
+INFO       Found 2 roof element(s) for geometry extraction
+INFO       Applying true-north correction: 310.00°
+INFO       Roof area validated: geometry=165.1 m², property-set=165.1 m² (0% diff)
+INFO       Extracted 2 roof segment(s) from arc.ifc
