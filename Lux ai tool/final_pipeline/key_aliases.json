@@ -1,0 +1,3323 @@
+{
+  "window_area": [
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "Qto_WindowBaseQuantities",
+      "key": "Area"
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "Area"
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossArea"
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "attr",
+      "keys": [
+        "OverallHeight",
+        "OverallWidth"
+      ],
+      "op": "multiply"
+    }
+  ],
+  "floor_area": [
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "Qto_SpaceBaseQuantities",
+      "key": "NetFloorArea"
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "Qto_SpaceBaseQuantities",
+      "key": "GrossFloorArea"
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetFloorArea"
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossFloorArea"
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "GSA Space Areas",
+      "key": "GSA BIM Area"
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "Qto_SlabBaseQuantities",
+      "key": "NetArea",
+      "predefined_type": "FLOOR"
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetArea",
+      "predefined_type": "FLOOR"
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossArea",
+      "predefined_type": "FLOOR"
+    }
+  ],
+  "roof_area": [
+    {
+      "entity": "IfcRoof",
+      "source": "qset",
+      "set_name": "Qto_RoofBaseQuantities",
+      "key": "NetArea"
+    },
+    {
+      "entity": "IfcRoof",
+      "source": "qset",
+      "set_name": "Qto_RoofBaseQuantities",
+      "key": "GrossArea"
+    },
+    {
+      "entity": "IfcRoof",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetArea"
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "Qto_SlabBaseQuantities",
+      "key": "NetArea",
+      "predefined_type": "ROOF"
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "Qto_SlabBaseQuantities",
+      "key": "GrossArea",
+      "predefined_type": "ROOF"
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetArea",
+      "predefined_type": "ROOF"
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossArea",
+      "predefined_type": "ROOF"
+    }
+  ],
+  "true_north_angle": [
+    {
+      "entity": "IfcGeometricRepresentationContext",
+      "source": "attr",
+      "key": "TrueNorth",
+      "note": "DirectionRatios (X,Y) → atan2(x,y) → compass bearing"
+    }
+  ],
+  "latitude": [
+    {
+      "entity": "IfcSite",
+      "source": "attr",
+      "key": "RefLatitude",
+      "note": "IfcCompoundPlaneAngleMeasure [deg,min,sec,microsec]"
+    }
+  ],
+  "longitude": [
+    {
+      "entity": "IfcSite",
+      "source": "attr",
+      "key": "RefLongitude",
+      "note": "IfcCompoundPlaneAngleMeasure [deg,min,sec,microsec]"
+    }
+  ],
+  "roof_slope": [
+    {
+      "entity": "IfcRoof",
+      "source": "pset",
+      "set_name": "Dimensions",
+      "key": "Slope",
+      "note": "Revit-exported roof slope in degrees"
+    },
+    {
+      "entity": "IfcRoof",
+      "source": "pset",
+      "set_name": "Abmessungen",
+      "key": "Neigung",
+      "note": "ArchiCAD German — roof slope"
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "pset",
+      "set_name": "Dimensions",
+      "key": "Slope",
+      "predefined_type": "ROOF",
+      "note": "Revit-exported roof slab slope"
+    }
+  ],
+  "thermal_transmittance": [
+    {
+      "entity": "IfcRoof",
+      "source": "pset",
+      "set_name": "Pset_RoofCommon",
+      "key": "ThermalTransmittance",
+      "note": "U-value in W/(m²·K) — for energy modelling"
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "pset",
+      "set_name": "Pset_SlabCommon",
+      "key": "ThermalTransmittance",
+      "predefined_type": "ROOF",
+      "note": "U-value for roof slabs"
+    },
+    {
+      "entity": "IfcWall",
+      "source": "pset",
+      "set_name": "Pset_WallCommon",
+      "key": "ThermalTransmittance",
+      "note": "U-value for walls — future energy modelling"
+    }
+  ],
+  "_auto_discovered_area_keys": [
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "F/T Oberfläche der Öffnung auf der Anschlagseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "F/T Oberfläche der Öffnung gegenüber der Anschlagseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Nominale T/F Öffnungsoberfläche auf der Anschlagsseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Nominale T/F Öffnungsoberfläche auf der Seite gegenüber der Anschlagsseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "T/F Öffnung Nominaler Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "W/D Opening Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "W/D Opening Nominal Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Nominal W/D Opening Surface Area on the Reveal Side",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Nominal W/D Opening Surface Area on the Side Opposite to the Reveal Side",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWindow",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "Area",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "F/T Oberfläche der Öffnung auf der Anschlagseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "F/T Oberfläche der Öffnung gegenüber der Anschlagseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Nominale T/F Öffnungsoberfläche auf der Anschlagsseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Nominale T/F Öffnungsoberfläche auf der Seite gegenüber der Anschlagsseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "T/F Öffnung Nominaler Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Bottom Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "W/D Opening Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "W/D Opening Nominal Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "W/D Opening Surface Area on the Reveal Side",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "W/D Opening Surface Area on the Side Opposite to the Reveal Side",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Nominal W/D Opening Surface Area on the Reveal Side",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Nominal W/D Opening Surface Area on the Side Opposite to the Reveal Side",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcDoor",
+      "source": "qset",
+      "set_name": "Qto_DoorBaseQuantities",
+      "key": "Area",
+      "file_count": 3,
+      "projects": [
+        "digital_hub",
+        "fantasy_office_building_1",
+        "fantasy_office_building_2"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "GSA Space Areas",
+      "key": "GSA Space Areas",
+      "file_count": 1,
+      "projects": [
+        "samuel_macalister_sample_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "SpaceNetFloorAreaBOMA",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "SpaceUsableFloorAreaBOMA",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossCeilingArea",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetCeilingArea",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossWallArea",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetWallArea",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Fläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Berechnete Fläche (NRF)",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Türen-Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Stützenabzugsfläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Schraffurabzugsfläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Niedrige Abzugsfläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Wandabzugsfläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gemessene Fläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Nettofläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Reduzierte Fläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Raumflächen Reduzierung",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gesamtabzugsfläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Heizkörpernische Oberflächenbereich hinten",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Heizkörpernische Oberflächenbereich seitlich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Heizkörpernische Oberflächenbereich oben",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Wand-Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Fenster-Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Top Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Edge Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Bottom Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Calculated Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Measured Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Windows Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Doors Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Walls Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area Reducement",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Extracted Column Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Extracted Fill Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Extracted Low Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Extracted Wall Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Measured Net Area",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Reduced Area",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Total Extracted Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Wall Inset Back Side Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Wall Inset Side Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Wall Inset Top Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Extracted Curtain Wall Area",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "Qto_SpaceBaseQuantities",
+      "key": "GrossCeilingArea",
+      "file_count": 2,
+      "projects": [
+        "fantasy_office_building_1",
+        "fantasy_office_building_2"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSpace",
+      "source": "qset",
+      "set_name": "(unnamed)",
+      "key": "NetFootprintArea",
+      "file_count": 1,
+      "projects": [
+        "hitos"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Fläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich Unterseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich Oberseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Kante Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Löcher Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Oberfläche der Deckenoberseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Oberflächenbereich der Deckenunterseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Oberflächenbereich der Deckenkanten",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Konditionaler Oberflächenbereich der Unterseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Konditionaler Oberflächenbereich der Oberseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Oberflächenbereich der Deckenoberseite mit Löchern",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Oberflächenbereich der Deckenunterseite mit Löchern",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Oberflächenbereich der Deckenkanten mit Löchern",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Netto-Oberflächenbereich Unterseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Netto-Oberflächenbereich Oberseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Netto-Oberflächenbereich der Kante",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Oberflächenbereich an der Unterseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Oberflächenbereich an der Oberseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Oberflächenbereich der Dachkanten",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Konditionaler Oberflächenbereich unten",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Konditionaler Oberflächenbereich oben",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich der Öffnungen",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Top Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Top Surface Area (Conditional)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Edge Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Bottom Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Bottom Surface Area (Conditional)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Bottom Surface Area (Gross)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Edge Surface Area (Gross)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Top Surface Area (Gross)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Slab Top (Conditional)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Slab Bottom (Gross)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Slab Bottom (Gross, with holes)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Slab Edges (Gross)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Slab Edges (Gross, with holes)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Slab Top (Gross)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Slab Top (Gross, with holes)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Holes Surface Area",
+      "file_count": 2,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Bottom Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area of the Bottom",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area of the Top",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Edge Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Bottom",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Bottom with Holes",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Edges",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Edges with Holes",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Top",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Top with Holes",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Top Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSlab",
+      "source": "qset",
+      "set_name": "(unnamed)",
+      "key": "NetFootprintArea",
+      "file_count": 1,
+      "projects": [
+        "hitos"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcRoof",
+      "source": "qset",
+      "set_name": "Qto_RoofBaseQuantities",
+      "key": "ProjectedArea",
+      "file_count": 2,
+      "projects": [
+        "fantasy_office_building_1",
+        "fantasy_office_building_2"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossFootprintArea",
+      "file_count": 7,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetFootprintArea",
+      "file_count": 6,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossSideArea",
+      "file_count": 7,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetSideArea",
+      "file_count": 7,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Fläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Netto-Oberflächenbereich an der Außenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Netto-Oberflächenbereich an der Innenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Netto-Oberflächenbereich an den Kanten",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Fläche der Wand",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Wandoberflächenbereich an der Innenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Wandoberflächenbereich an der Außenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytische Oberfläche der Öffnungen an der Innenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytische Oberfläche der Öffnungen an der Außenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Konditionaler Oberflächenbereich an der Außenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Konditionaler Oberflächenbereich an der Innenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich der Fenster in der Wand",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich der Türen in der Wand",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich der leeren Öffnungen in der Wand",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area",
+      "file_count": 3,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area",
+      "file_count": 3,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Top Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Edge Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Bottom Surface Area (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Doors",
+      "file_count": 3,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Windows",
+      "file_count": 3,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytic Surface Area of Openings on the Inside Face",
+      "file_count": 3,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytic Surface Area of Openings on the Outside Face",
+      "file_count": 3,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Wall Inside Face (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Wall Outside Face (Net)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Wall Inside Face (Conditional)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Wall Outside Face (Conditional)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Wall Inside Face (Gross)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of the Wall Outside Face (Gross)",
+      "file_count": 1,
+      "projects": [
+        "molio"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of Empty Openings in the Wall",
+      "file_count": 3,
+      "projects": [
+        "molio",
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area of the Edges",
+      "file_count": 2,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area on the Inside Face",
+      "file_count": 2,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area on the Outside Face",
+      "file_count": 2,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area on the Inside Face",
+      "file_count": 2,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area on the Outside Face",
+      "file_count": 2,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Wall on the Inside Face",
+      "file_count": 2,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Wall on the Outside Face",
+      "file_count": 2,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Wall",
+      "file_count": 2,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "Qto_WallBaseQuantities",
+      "key": "GrossFootprintArea",
+      "file_count": 3,
+      "projects": [
+        "digital_hub",
+        "fantasy_office_building_1",
+        "fantasy_office_building_2"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "Qto_WallBaseQuantities",
+      "key": "GrossSideArea",
+      "file_count": 3,
+      "projects": [
+        "digital_hub",
+        "fantasy_office_building_1",
+        "fantasy_office_building_2"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "Qto_WallBaseQuantities",
+      "key": "NetSideArea",
+      "file_count": 3,
+      "projects": [
+        "digital_hub",
+        "fantasy_office_building_1",
+        "fantasy_office_building_2"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "(unnamed)",
+      "key": "NetFootprintArea",
+      "file_count": 1,
+      "projects": [
+        "hitos"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "(unnamed)",
+      "key": "NetSideAreaLeft",
+      "file_count": 1,
+      "projects": [
+        "hitos"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWall",
+      "source": "qset",
+      "set_name": "(unnamed)",
+      "key": "NetSideAreaRight",
+      "file_count": 1,
+      "projects": [
+        "hitos"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossFootprintArea",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetFootprintArea",
+      "file_count": 4,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossSideArea",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetSideArea",
+      "file_count": 5,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Fläche",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Netto-Oberflächenbereich an der Außenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Netto-Oberflächenbereich an der Innenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Netto-Oberflächenbereich an den Kanten",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Fläche der Wand",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Wandoberflächenbereich an der Innenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Brutto-Wandoberflächenbereich an der Außenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytische Oberfläche der Öffnungen an der Innenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytische Oberfläche der Öffnungen an der Außenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Konditionaler Oberflächenbereich an der Außenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Konditionaler Oberflächenbereich an der Innenseite",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich der Fenster in der Wand",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich der Türen in der Wand",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Oberflächenbereich der leeren Öffnungen in der Wand",
+      "file_count": 2,
+      "projects": [
+        "ac20",
+        "fzk_house"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Doors",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Windows",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytic Surface Area of Openings on the Inside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytic Surface Area of Openings on the Outside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area of the Edges",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area on the Inside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area on the Outside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area on the Inside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area on the Outside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Wall on the Inside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Wall on the Outside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Wall",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of Empty Openings in the Wall",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "(unnamed)",
+      "key": "NetFootprintArea",
+      "file_count": 1,
+      "projects": [
+        "hitos"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "(unnamed)",
+      "key": "NetSideAreaLeft",
+      "file_count": 1,
+      "projects": [
+        "hitos"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcWallStandardCase",
+      "source": "qset",
+      "set_name": "(unnamed)",
+      "key": "NetSideAreaRight",
+      "file_count": 1,
+      "projects": [
+        "hitos"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "Qto_CoveringBaseQuantities",
+      "key": "GrossArea",
+      "file_count": 1,
+      "projects": [
+        "digital_hub"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "Qto_CoveringBaseQuantities",
+      "key": "NetArea",
+      "file_count": 1,
+      "projects": [
+        "digital_hub"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossArea",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "NetArea",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Doors",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Windows",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytic Surface Area of Openings on the Inside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Analytic Surface Area of Openings on the Outside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area of the Edges",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area on the Inside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area on the Outside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area on the Inside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area on the Outside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Wall on the Inside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Wall on the Outside Face",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Wall",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Surface Area of Empty Openings in the Wall",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Bottom Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area of the Bottom",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Conditional Surface Area of the Top",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Edge Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Bottom",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Bottom with Holes",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Edges",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Edges with Holes",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Top",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Slab Top with Holes",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Holes Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Top Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Area of the Column",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Core (without Top/Bottom)",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Core Top (or Bottom)",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Veneer (without Top/Bottom)",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Gross Surface Area of the Veneer Top (or Bottom)",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area of the Core Bottom",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area of the Core (without Top/Bottom)",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area of the Core Top",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area of the Veneer Bottom",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Veneer Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Net Surface Area of the Veneer Top",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "End Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Holes Edge Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Left Side Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcCovering",
+      "source": "qset",
+      "set_name": "ArchiCADQuantities",
+      "key": "Right Side Surface Area",
+      "file_count": 1,
+      "projects": [
+        "sixty5"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcSite",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossArea",
+      "file_count": 7,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcBuilding",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossFloorArea",
+      "file_count": 7,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    },
+    {
+      "entity": "IfcBuildingStorey",
+      "source": "qset",
+      "set_name": "BaseQuantities",
+      "key": "GrossFloorArea",
+      "file_count": 7,
+      "projects": [
+        "ac20",
+        "fzk_house",
+        "molio",
+        "sixty5",
+        "smiley_west"
+      ],
+      "auto_discovered": true
+    }
+  ]
+}

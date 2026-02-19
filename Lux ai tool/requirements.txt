@@ -1,0 +1,4 @@
+# IFCore platform dependencies
+ifcopenshell
+numpy
+requests
