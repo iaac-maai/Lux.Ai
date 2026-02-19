@@ -2,6 +2,7 @@
 config.py — Shared constants and defaults for the solar pipeline.
 """
 
+import os
 from pathlib import Path
 
 __version__ = "1.0.0"
@@ -15,7 +16,7 @@ DEFAULT_SAMPLE_ROOT = REPO_ROOT / "Sample projects" / "projects"
 
 # ── NREL PVWatts v8 API ──────────────────────────────────────────────────────
 
-NREL_API_KEY = "0zwEIS1adJrx658O3gjQYfI7AprKLjQf4KP420o9"
+NREL_API_KEY = os.environ.get("NREL_API_KEY", "0zwEIS1adJrx658O3gjQYfI7AprKLjQf4KP420o9")
 PVWATTS_BASE_URL = "https://developer.nrel.gov/api/pvwatts/v8.json"
 
 # ── Solar panel assumptions ───────────────────────────────────────────────────
